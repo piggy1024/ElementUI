@@ -7,8 +7,8 @@
     active-text-color="#ffd04b"
     :collapse="isCollapse"
   >
-    <h3 v-show="!isCollapse">后台管理系统</h3>
-    <h3 v-show="isCollapse">后台管理</h3>
+    <h3 v-show="!isCollapse">HR管理中心</h3>
+    <h3 v-show="isCollapse">HR管理</h3>
     <el-menu-item
       :index="item.path"
       v-for="item in noChildren"

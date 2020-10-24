@@ -9,7 +9,7 @@ export default {
       {
         path: "/",
         name: "home",
-        label: "首页",
+        label: "个人中心",
         icon: "s-home"
       }
     ]

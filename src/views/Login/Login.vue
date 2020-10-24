@@ -1,6 +1,5 @@
 <template>
   <div class="login" style="padding-top: 40px">
-    <!-- <div class="login-form"> -->
     <el-form :label-position="labelPosition" label-width="80px" :model="form">
       <el-form-item label="用户名">
         <el-input v-model="form.username"></el-input>
@@ -12,7 +11,6 @@
         <el-button type="primary" @click="login">登录</el-button>
       </el-form-item>
     </el-form>
-    <!-- </div> -->
   </div>
 </template>
 
@@ -31,7 +29,6 @@ export default {
         } else {
           this.$message.warning(res.data.message);
         }
-        console.log(res);
       });
     }
   },
@@ -48,19 +45,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .login {
-//   display: flex;
-//   align-content: center;
-//   align-items: center;
-//   justify-content: center;
-// }
-// .login-form {
-//   padding: 100px 30px;
-//   margin-top: 50px;
-//   background-color: #fff;
-//   height: 550px;
-//   width: 500px;
-// }
 .el-form {
   margin: auto;
   width: 50%;

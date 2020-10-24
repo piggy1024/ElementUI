@@ -60,7 +60,11 @@
             <Echart style="height:260px" :chartData="echartData.user"></Echart>
           </el-card>
           <el-card shadow="hover">
-            <Echart style="height:260px" :chartData="echartData.video"></Echart>
+            <Echart
+              style="height:260px"
+              :chartData="echartData.video"
+              :isAxisChart="false"
+            ></Echart>
           </el-card>
         </div>
       </el-col>

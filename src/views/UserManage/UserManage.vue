@@ -143,6 +143,8 @@ export default {
           }
         })
         .then(res => {
+          console.log(res.data.list);
+
           this.tableData = res.data.list.map(item => {
             item.sexLabel = item.sex === 0 ? "女" : "男";
             return item;

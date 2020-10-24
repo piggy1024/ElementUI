@@ -14,28 +14,42 @@ export default {
               {
                 path: "/",
                 name: "home",
-                label: "首页",
+                label: "个人中心",
                 icon: "s-home",
                 url: "Home/Home"
               },
               {
                 path: "/video",
                 name: "video",
-                label: "视频管理页",
+                label: "职位管理",
                 icon: "video-play",
                 url: "VideoManage/VideoManage"
               },
               {
                 path: "/user",
                 name: "user",
-                label: "用户管理页",
+                label: "简历管理",
                 icon: "user",
                 url: "UserManage/UserManage"
+              },
+              {
+                path: "/gismap",
+                name: "gismap",
+                label: "gismapTest",
+                icon: "user",
+                url: "gisMap/gisMap"
               },
               {
                 label: "其他",
                 icon: "location",
                 children: [
+                  {
+                    path: "/main",
+                    name: "main",
+                    label: "父组件",
+                    icon: "setting",
+                    url: "Other/main"
+                  },
                   {
                     path: "/page1",
                     name: "page1",

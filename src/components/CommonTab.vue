@@ -2,10 +2,10 @@
   <div class="tabs">
     <el-tag
       :key="tag.name"
-      v-for="tag in tags"
+      v-for="(tag, index) in tags"
       :closable="tag.name !== 'home'"
       :disable-transitions="false"
-      @close="handleClose(tag)"
+      @close="handleClose(tag, index)"
       size="mini"
       @click="changeMenu(tag)"
       type="primary"
@@ -23,17 +23,26 @@ export default {
     })
   },
   data() {
-    return {
-      inputVisible: false,
-      inputValue: ""
-    };
+    return {};
   },
   methods: {
     ...mapMutations({
       close: "closeTab"
     }),
-    handleClose(tag) {
+    handleClose(tag, index) {
+      let length = this.tags.length - 1;
       this.close(tag);
+      // 如果关闭的标签不是当前路由的话，就不跳转
+      if (tag.name !== this.$route.name) {
+        return;
+      }
+      // 关闭的标签是最右边的话，往左边跳转一个
+      if (index === length) {
+        this.$router.push({ name: this.tags[index - 1].name });
+      } else {
+        // 否则往右边跳转
+        this.$router.push({ name: this.tags[index].name });
+      }
     },
     changeMenu(item) {
       this.$router.push({ name: item.name });

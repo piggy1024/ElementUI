@@ -9,6 +9,12 @@ import "element-ui/lib/theme-chalk/index.css";
 import http from "@/api/config";
 import "./mock";
 
+// 定义全局自定义指令
+Vue.directive("myd", {
+  bind: function(el, binding, vnode, oldVnode) {
+    console.log(el);
+  }
+});
 // 第三方包
 import ElementUI from "element-ui";
 

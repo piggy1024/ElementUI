@@ -7,7 +7,8 @@ const routes = [
   // {
   //   path: "/",
   //   component: () => import("@/views/Main.vue"),
-  //   children: [{
+  //   children: [
+  //     {
   //       path: "/home",
   //       name: "home",
   //       component: () => import("@/views/Home/Home.vue")
@@ -39,6 +40,11 @@ const routes = [
     name: "login",
     component: () => import("@/views/Login/Login")
   }
+  // {
+  //   path: "/login",
+  //   name: "login",
+  //   component: () => import("@/views/gisMap/gisMap")
+  // }
 ];
 
 const router = new VueRouter({

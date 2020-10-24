@@ -8,10 +8,10 @@
         @click="collapseMenu"
       ></el-button>
       <el-breadcrumb separator="/">
-        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item :to="current.path" v-if="current">
-          {{ current.label }}
-        </el-breadcrumb-item>
+        <el-breadcrumb-item :to="{ path: '/' }">个人中心</el-breadcrumb-item>
+        <el-breadcrumb-item :to="current.path" v-if="current">{{
+          current.label
+        }}</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
 
